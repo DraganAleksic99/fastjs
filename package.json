@@ -1,0 +1,14 @@
+{
+  "name": "fastjs-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "serve:static": "npx http-server . -o ./examples/"
+  },
+  "keywords": ["frontend", "framework", "fastjs", "js", "javascript"],
+  "author": "Dragan Aleksic",
+  "license": "ISC",
+  "description": "A project to learn how to write a frontend framework",
+  "workspaces": ["packages/runtime"]
+}

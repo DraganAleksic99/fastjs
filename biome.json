@@ -2,7 +2,8 @@
   "files": {
     "include": [
       "packages/runtime/src/**/*.js",
-      "packages/runtime/__tests__/**/*.js"
+      "packages/runtime/__tests__/**/*.js",
+      "examples"
     ],
     "ignore": ["node_modules", "packages/runtime/node_modules/**/*"]
   },

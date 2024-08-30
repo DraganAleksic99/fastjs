@@ -30,18 +30,18 @@ export function createApp(state, view, reducers = {}) {
     vdom = view(state, emit);
 
     mountDOM(vdom, parentEl);
-
-    return {
-      mount(_parentEl) {
-        parentEl = _parentEl;
-
-        renderApp();
-      },
-      unmount() {
-        destroyDOM(vdom);
-        vdom = null;
-        subscriptions.forEach((unsubscribe) => unsubscribe());
-      },
-    };
   }
+
+  return {
+    mount(_parentEl) {
+      parentEl = _parentEl;
+
+      renderApp();
+    },
+    unmount() {
+      destroyDOM(vdom);
+      vdom = null;
+      subscriptions.forEach((unsubscribe) => unsubscribe());
+    },
+  };
 }

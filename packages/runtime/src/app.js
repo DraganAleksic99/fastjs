@@ -16,7 +16,7 @@ export function createApp({ state, view, reducers = {} }) {
   for (const actionName in reducers) {
     const reducer = reducers[actionName];
     const subs = dispatcher.subscribe(actionName, (payload) => {
-      const state = reducer(state, payload);
+      state = reducer(state, payload);
     });
 
     subscriptions.push(subs);
